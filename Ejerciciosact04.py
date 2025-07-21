@@ -168,4 +168,10 @@ else:
     print(f"Envio total: Q{total_price}.")'''
 
 # Sistema de calificaciones con curva 7
-Est1 = 22
+notes = []
+students = []
+for i in range(5):
+    print("----------------BIENVENIDO A INGRESAR CALIFICACIONES----------------")
+    names = input("Ingrese un noonbre"
+                  "")
+    no
