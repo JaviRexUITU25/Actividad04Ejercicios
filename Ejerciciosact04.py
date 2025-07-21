@@ -1,4 +1,4 @@
-'''#Simulador de votacion cruzada
+'''#Simulador de votacion cruzada 1
 print("---------BIENVENIDO AL REGISTRO DE VOTACIONES---------")
 name = input("Ingrese nombre completo: ")
 if len(name) < 5:
@@ -17,7 +17,7 @@ else:
     if año_nacimiento > 2007:
         print("Debe ser mayor de edad para votar.")'''
 
-'''# Calculadora de impuestos progresivos + deducciones
+'''# Calculadora de impuestos progresivos + deducciones 2
 ingreso_anual = int(input("Ingrese su ingreso anual: "))
 dependiente = int(input("Ingrese el numero de dependientes: "))
 if 0 < ingreso_anual <= 30000:
@@ -31,7 +31,7 @@ if ingreso_anual > 100000:
 if ingreso_anual < 40000 and dependiente < 2:
     print("No se paga impuestos")'''
 
-#Sistema de autenticacion avanzado con penalizacion
+#Sistema de autenticacion avanzado con penalizacion 3
 
 '''users = []
 passwords = "12345"
@@ -55,7 +55,7 @@ while numero_intentos > 0:
         print("----------------------------ACCESO BLOQUEADO----------------------------")
         break'''
 
-'''#Simulador de facturacion con IVA, descuentos y propina
+'''#Simulador de facturacion con IVA, descuentos y propina 4
 milk = 30
 eggs = 40
 shopping = []
@@ -136,10 +136,36 @@ while True:
             factura =int(input(""))'''
 
 
-'''#Verificador de fecha válida
-date = input("Ingrese el numero del mes y del dia: ", end= '')
+'''#Verificador de fecha válida 5
+date = input("Ingrese el numero del mes y del dia: ", end= "")
 mes, dia = map(int, input().split())
 semana = {1: "Lunes", 2: "Martes", 3: "Miercoles", 4: "Jueves", 5: "Viernes", 6: "Sabado", 7: "Domingo"}
-
 leche = 30
 print(f"El total de su compra es de: {leche}")'''
+
+'''#Clasificador de envio con multiples condiciones 6
+print("---------------------Clasificador de envios---------------------")
+package_weight = int(input("Ingrese el peso del paquete(kg): "))
+distance = int(input("Ingrese la distancia del paquete(km): "))
+urgent = int(input("1. Si\n"
+                   "2. No\n"
+                   "¿El pedido es urgente?: "))
+size = int(input("Ingrese el tamaño del paquete:"
+             "1. Grande\n"
+             "2. Mediano\n"
+             "3. Pequeño\n "))
+if urgent == 1:
+    total_price = 40
+    print(f"Envio total: Q{total_price + 50}.")
+if size == 1:
+    total_price = 40
+    print(f"Envio total: Q{total_price + 30}.")
+if urgent == 2 and package_weight <5:
+    total_price = 40
+    print(f"Envio total: Q{total_price - 20}.")
+else:
+    total_price = 40
+    print(f"Envio total: Q{total_price}.")'''
+
+# Sistema de calificaciones con curva 7
+Est1 = 22
