@@ -16,6 +16,7 @@ else:
             print(f"Bienvenido {name}, su centro de votacion es {dep}")
     if año_nacimiento > 2007:
         print("Debe ser mayor de edad para votar.")'''
+from tkinter.filedialog import dialogstates
 
 '''# Calculadora de impuestos progresivos + deducciones 2
 ingreso_anual = int(input("Ingrese su ingreso anual: "))
@@ -136,12 +137,30 @@ while True:
             factura =int(input(""))'''
 
 
-'''#Verificador de fecha válida 5
-date = input("Ingrese el numero del mes y del dia: ", end= "")
-mes, dia = map(int, input().split())
-semana = {1: "Lunes", 2: "Martes", 3: "Miercoles", 4: "Jueves", 5: "Viernes", 6: "Sabado", 7: "Domingo"}
-leche = 30
-print(f"El total de su compra es de: {leche}")'''
+#Verificador de fecha válida 5
+day = int(input("Ingrese el dia: "))
+month = int(input("Ingrese el mes: "))
+year = int(input("Ingrese el año: "))
+leap = (year % 4 == 0 and year % 100 != 0 and year % 400 == 0)
+days = [31,28,31,30,31,30,31,31,30,31,30,31]
+if leap:
+    days[1]=29
+if 1 <day > days[month -1]:
+    print("Dia invalido")
+elif 1 < month > 12:
+    print("Mes invalido")
+else:
+    q = day
+    m = month
+    y = year
+    if m < 3:
+        m += 12
+        y -=1
+    k = y % 100
+    j = y // 100
+    h = (q + (13 * (m + 1)) //5 + k + (k// 4) + (j//4) + 5 * j) % 7
+    week =
+
 
 '''#Clasificador de envio con multiples condiciones 6
 print("---------------------Clasificador de envios---------------------")
@@ -168,11 +187,9 @@ else:
     print(f"Envio total: Q{total_price}.")'''
 
 # Sistema de calificaciones con curva 7
-names = {}
+'''names = {}
 dictionarie = {}
 for i in range(5):
-    names = {}
-    dictionarie = {}
     r_names = input("Ingrese nombre: ")
     r_notes1 = int(input("Ingrese Nota:"))
     r_notes2 = int(input("Ingrese Nota:"))
@@ -181,9 +198,34 @@ for i in range(5):
     dictionarie[r_names] = (r_notes1 + r_notes2 + r_notes3) / 3
     print(f"Promedio: {[[dictionarie[r_names]]]}")
 for i in dictionarie:
-    print("Promedio final\n: ")
-    print(i)
-    if 70 > dictionarie: break
+    print("Promedio final: ")
+    if dictionarie[i] > 70: break
 else:
-    print(f"Notas con curva: {[[r_notes1 + 5, r_notes2 + 5, r_notes3 + 5]]} ")
-    print("------TABLA")
+    for y in names:
+        names[y] = [names[y][0] + 5, names[y][1] + 5, names[y][2] + 5]
+        dictionarie[y] = sum(names[y])/3
+print(f"------TABLA-----\n"
+      f"{dictionarie}")'''
+
+#CALCULADORA de rumbo entre puntos cardinales 8
+while True:
+    direction = int(input("------RUMBO------\n"
+          "-"*5 + "Elija la opcion:"
+                  "1. Norte a sur"
+                  "2. Norte a este"
+                  "3. Norte a oeste"
+                  "4. Sur a norte"
+                  "5. Sur a este"
+                  "6. Sur a oeste"
+                  "7. Este a norte"
+                  "8. Este a sur"
+                  "8. Este a oeste"
+                  "9. Oeste a norte"
+                  "10. Oeste a sur"
+                  "10. Oeste a este"))
+    if direction == 1:
+        print("Debes ir recto")
+    if direction == 2:
+        print("")
+
+
