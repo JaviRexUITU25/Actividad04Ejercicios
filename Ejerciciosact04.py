@@ -16,6 +16,7 @@ else:
             print(f"Bienvenido {name}, su centro de votacion es {dep}")
     if año_nacimiento > 2007:
         print("Debe ser mayor de edad para votar.")'''
+from idlelib.colorizer import prog_group_name_to_tag
 from tkinter.filedialog import dialogstates
 
 '''# Calculadora de impuestos progresivos + deducciones 2
@@ -138,7 +139,7 @@ while True:
 
 
 #Verificador de fecha válida 5
-day = int(input("Ingrese el dia: "))
+'''day = int(input("Ingrese el dia: "))
 month = int(input("Ingrese el mes: "))
 year = int(input("Ingrese el año: "))
 leap = (year % 4 == 0 and year % 100 != 0 and year % 400 == 0)
@@ -159,7 +160,8 @@ else:
     k = y % 100
     j = y // 100
     h = (q + (13 * (m + 1)) //5 + k + (k// 4) + (j//4) + 5 * j) % 7
-    week =
+    week =["Sabado", "Domingo", "Lunes", "Martes","Miercoles", "Jueves", "Viernes"]
+    print(f"El {day}/{month}/{year} es el dia: {week}")'''
 
 
 '''#Clasificador de envio con multiples condiciones 6
@@ -207,25 +209,57 @@ else:
 print(f"------TABLA-----\n"
       f"{dictionarie}")'''
 
-#CALCULADORA de rumbo entre puntos cardinales 8
+'''#CALCULADORA de rumbo entre puntos cardinales 8
 while True:
-    direction = int(input("------RUMBO------\n"
-          "-"*5 + "Elija la opcion:"
-                  "1. Norte a sur"
-                  "2. Norte a este"
-                  "3. Norte a oeste"
-                  "4. Sur a norte"
-                  "5. Sur a este"
-                  "6. Sur a oeste"
-                  "7. Este a norte"
-                  "8. Este a sur"
-                  "8. Este a oeste"
-                  "9. Oeste a norte"
-                  "10. Oeste a sur"
-                  "10. Oeste a este"))
-    if direction == 1:
-        print("Debes ir recto")
-    if direction == 2:
-        print("")
+    direction = input("Elija el primer punto: ")
+    direction2 = input("Elija el segundo punto: ")
+    if direction == "Norte" and direction2 == "Sur" :print("tu rumbo es ir ir recto")
+    break
+    elif direction =="Norte" and direction2 == "este" : print("Tu rumbo es noreste")
+    break
+    elif direction == "Norte" and direction2 == "oeste": print("Tu rumbo es el noroeste")
+    break
+    elif direction == "Sur" and direction2 == "norte": print("Tu rumbo es ir recto")
+    break
+    elif direction == "Sur" and direction2 == "este":print("Tu rumbo es el sureste")
+    break
+    elif direction == "Sur" and direction2 == "oeste":print("Tu rumbo es el suroeste")
+    break
+    elif direction == "este" and direction2 == "norte":print("Tu rumbo es ir hacia el nororiente")
+    break
+    elif direction == "este" and direction2 == "sur":print("Tu rumbo es ir del este hacia el sur")
+    break
+    elif direction == "este" and direction2 == "oeste":print("Tu rumbo es ir del este al oeste")
+    break
+    elif direction == "oeste" and direction2 == "norte":print("Tu rumbo es ir del oeste al norte")
+    break
+    elif direction == "oeste" and direction2 == "Sur":print("Tu rumbo es ir del oeste al sur")
+    break
+    elif direction == "oeste" and direction2 == "este": print("Tu rumbo es ir del oeste al este")
+    break'''
+#Simulador de entradas al cine con validación múltiple 9
+while True:
+    print("-------ENTRADAS DE CINE-------")
+    movie = int("1. B12\n"
+                "2. B15\n"
+                "3. B18\n"
+                "Ingrese la clasificacion de la pelicula: ")
+    age = int(input("Ingrese su edad: "))
+    week = input("1.Lunes\n"
+                 "2. Martes\n"
+                 "3. Miercoles\n"
+                 "4. Jueves\n"
+                 "5. Viernes\n"
+                 "6. Sabado\n"
+                 "7. Domingo\n"
+                 "Ingrese dia de la semana:  ")
+    student = int(input("1. Si \n"
+                    "2. No\n"
+                    "¿Es estudiante?"))
+    if age <=13 and movie == 2 or movie == 3:
+        print("No tienes permitido entrar a ver esta pelicula")
+    elif week == 3:
+        print("Tienes uyn descuento del 2x1")
+
 
 
