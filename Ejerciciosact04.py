@@ -168,10 +168,22 @@ else:
     print(f"Envio total: Q{total_price}.")'''
 
 # Sistema de calificaciones con curva 7
-notes = []
-students = []
+names = {}
+dictionarie = {}
 for i in range(5):
-    print("----------------BIENVENIDO A INGRESAR CALIFICACIONES----------------")
-    names = input("Ingrese un noonbre"
-                  "")
-    no
+    names = {}
+    dictionarie = {}
+    r_names = input("Ingrese nombre: ")
+    r_notes1 = int(input("Ingrese Nota:"))
+    r_notes2 = int(input("Ingrese Nota:"))
+    r_notes3 = int(input("Ingrese Nota:"))
+    names[r_names] = [r_notes1, r_notes2, r_notes3]
+    dictionarie[r_names] = (r_notes1 + r_notes2 + r_notes3) / 3
+    print(f"Promedio: {[[dictionarie[r_names]]]}")
+for i in dictionarie:
+    print("Promedio final\n: ")
+    print(i)
+    if 70 > dictionarie: break
+else:
+    print(f"Notas con curva: {[[r_notes1 + 5, r_notes2 + 5, r_notes3 + 5]]} ")
+    print("------TABLA")
