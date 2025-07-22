@@ -240,26 +240,39 @@ while True:
 #Simulador de entradas al cine con validación múltiple 9
 while True:
     print("-------ENTRADAS DE CINE-------")
-    movie = int("1. B12\n"
+    movie = int(input("1. B12\n"
                 "2. B15\n"
                 "3. B18\n"
-                "Ingrese la clasificacion de la pelicula: ")
+                "Ingrese la clasificacion de la pelicula: "))
     age = int(input("Ingrese su edad: "))
-    week = input("1.Lunes\n"
+    week = int(input("1.Lunes\n"
                  "2. Martes\n"
                  "3. Miercoles\n"
                  "4. Jueves\n"
                  "5. Viernes\n"
                  "6. Sabado\n"
                  "7. Domingo\n"
-                 "Ingrese dia de la semana:  ")
+                 "Ingrese dia de la semana:  "))
     student = int(input("1. Si \n"
                     "2. No\n"
                     "¿Es estudiante?"))
-    if age <=13 and movie == 2 or movie == 3:
+    if age <=13 and movie == "2" or movie == "3":
         print("No tienes permitido entrar a ver esta pelicula")
+        if movie == "2" or movie == "3" and age >13:
+            print("Los boletos estan en Q50")
+            if movie == "2" or movie == "3" and age > 13 and week == 3:
+                print("----------Tus boletos estan en----------:  Q35")
     elif week == 3:
-        print("Tienes uyn descuento del 2x1")
+        print("Tienes una promoción del 2x1")
+    else:
+        print("El precio de los boletos es de Q50")
+    if student == 1:
+        print("¡El precio de los boletos es de Q35!")
+        if student == 1 and week == 3:
+            print("¡El precio de los boletos es de Q35 y hay una promocion del 2x1!")
+
+# Comparador de fechas (tipo calendario digital) 10
+
 
 
 
